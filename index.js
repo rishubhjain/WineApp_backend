@@ -37,6 +37,9 @@ const uploadFile = async (filepath) => {
 app.post('/upload', upload.single('image'), async (req, res) => {
 
     console.log("req came")
+    console.log(req)
+
+    // if (req.body.image) res.send({ message: 'File uploaded successfully', url: req.body.image });
 
     try {
         const imagePath = req.file.path; // This is the path where Multer saved the image
