@@ -33,6 +33,12 @@ const uploadFile = async (filepath) => {
     }
 }
 
+app.post('/test', async (req, res) => {
+    console.log("test")
+    res.send({ message: 'test' });
+
+});
+
 // Route to handle image upload
 app.post('/upload', upload.single('image'), async (req, res) => {
 
